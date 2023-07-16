@@ -1,8 +1,8 @@
 spring :
   datasource:
-    url: jdbc:postgresql://localhost:5432/leetcode
-    username: postgres
-    password: admin
+    url: jdbc:postgresql://dpg-ch5car9jvhts7knnu8cg-a.oregon-postgres.render.com:5432/my1db
+    username: my1db_user
+    password: s99fAu8Q2x24FCGyzrZFC3UcgrPKDKTN
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
