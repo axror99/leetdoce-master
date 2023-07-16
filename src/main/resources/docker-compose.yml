@@ -1,0 +1,22 @@
+version: '3'
+services:
+  db:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_DB: leetcode
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: my_password
+  web:
+    image: leetcode.jar
+    restart: always
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/leetcode
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: my_password

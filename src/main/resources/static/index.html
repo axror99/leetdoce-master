@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Data</title>
+  <style>
+    .user-card {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+
+    .user-card img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  </style>
+</head>
+<body>
+<div id="user-list"></div>
+
+<script>
+  // User data
+  var data = [
+    {
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },
+    {
+      "id": 5,
+      "name": "Latif",
+      "picture": "http://localhost:8080/api/image/d44d1114-ea65-4140-9206-5951c8452d1c.jpg",
+      "hard": 3,
+      "medium": 0,
+      "easy": 2
+    },
+    {
+      "id": 4,
+      "name": "Abbos",
+      "picture": "http://localhost:8080/api/image/9b159e66-ae91-4872-a2b8-35205faf9116.jpg",
+      "hard": 2,
+      "medium": 0,
+      "easy": 4
+    },
+    {
+      "id": 10,
+      "name": "Asror",
+      "picture": "http://localhost:8080/api/image/01f0e7b7-e2d2-4dd2-8650-e21eb915dc54.HEIC",
+      "hard": 2,
+      "medium": 0,
+      "easy": 2
+    },
+    {
+      "id": 6,
+      "name": "Soyib",
+      "picture": "http://localhost:8080/api/image/44dc7bc6-9824-4bea-be80-9ef67f76c7fb.jpg",
+      "hard": 1,
+      "medium": 2,
+      "easy": 2
+    },
+    {
+      "id": 8,
+      "name": "Ravshan",
+      "picture": "http://localhost:8080/api/image/cf6458ea-f55a-4e4d-a1b0-56e781ddd6d3.jpg",
+      "hard": 1,
+      "medium": 0,
+      "easy": 1
+    },
+    {
+      "id": 9,
+      "name": "Shoxrux",
+      "picture": "http://localhost:8080/api/image/91493b86-02ce-467a-b814-7ec57cfae5ff.jpg",
+      "hard": 0,
+      "medium": 1,
+      "easy": 0
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },{
+      "id": 7,
+      "name": "ME",
+      "picture": "http://localhost:8080/api/image/e86c1da4-a98d-442a-b800-a9df30d2f662.jpg",
+      "hard": 3,
+      "medium": 1,
+      "easy": 2
+    },
+  ];
+
+  // Function to create a user card
+  function createUserCard(user) {
+    var card = document.createElement('div');
+    card.className = 'user-card';
+
+    var image = document.createElement('img');
+    image.src = user.picture;
+    card.appendChild(image);
+
+    var name = document.createElement('h2');
+    name.textContent = user.name;
+    card.appendChild(name);
+
+    var difficulty = document.createElement('p');
+    difficulty.textContent = 'Difficulty: Hard - ' + user.hard + ', Medium - ' + user.medium + ', Easy - ' + user.easy;
+    card.appendChild(difficulty);
+
+    return card;
+  }
+
+  // Render user cards
+  var userList = document.getElementById('user-list');
+  data.forEach(function(user) {
+    var card = createUserCard(user);
+    userList.appendChild(card);
+  });
+</script>
+</body>
+</html>
